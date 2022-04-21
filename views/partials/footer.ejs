@@ -1,0 +1,125 @@
+<div class="footer-main">
+    <div class="footer-content">
+        <div class="footer-r footer-r1">
+            <img class="logo-white" src="/img/huddle-logo-white.png" alt="white Huddle logo" />
+            <p>Join the community and network with like-minded entrepreneurs and business owners.</p>
+            <div class="social-wrap">
+                <a class="social-link" href="/">
+                    <img class="social-icon" src="img/facebook.png" alt="Facebook Icon" />
+                </a>
+                <a class="social-link" href="/">
+                    <img class="social-icon" src="img/linkedin.png" alt="LinkedIn Icon" />
+                </a>
+                <a class="social-link" href="/">
+                    <img class="social-icon" src="img/twitter.png" alt="Twitter Icon" />
+                </a>
+                <a class="social-link" href="/">
+                    <img class="social-icon" src="img/tiktok.png" alt="Tiktok Icon" />
+                </a>
+            </div>
+        </div>
+        <div class="footer-r footer-r2">
+            <div class="footer-menu-left">
+                <h4>Huddle</h4>
+                <ul>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Home</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">About us</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Contact us</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-menu-right">
+                <h4>Resources</h4>
+                <ul>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Community</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Forums</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Contact us</a>
+                    </li>
+                    <li class="li-footer-links">
+                        <a class="footer-link" href="/">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-r footer-r3">
+            <div class="footer-tel-div">
+                <h4>Email</h4>
+                <a href="">
+                    <p>info@example.com</p>
+                </a>
+            </div>
+            <div class="footer-email-div">
+                <h4>Telephone</h4>
+                <a href="">
+                    <p>0203 111 1111</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    //Sticky nav 
+    window.onscroll = function () { setStickyNav() };
+    let navbar = document.getElementById("navbar");
+    let sticky = navbar.offsetTop;
+
+    function setStickyNav() {
+        if (window.pageYOffset >= sticky && window.screen.width >= 900) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        if (window.screen.width <= 900) {
+            navbar.classList.add("sticky-mob")
+        } else {
+            navbar.classList.remove("sticky-mob");
+        }
+    }
+
+    //higlight current page link
+    function currentNavLink(a) {
+        document.getElementById(a).classList.add("highlight-link");
+        let b = a + '-li';
+        document.getElementById(b).classList.add("highlight-link-li");
+    }
+
+    let pageId;
+    const currentHref = window.location.href;
+    const navLinks = document.getElementsByClassName("a-nav-text");
+    for (i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].href === currentHref) {
+            pageId = navLinks[i].id;
+            currentNavLink(pageId);
+        }
+    }
+
+    //hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+
+    //Input current page var to lost <p>
+    document.getElementById('current-href').innerHTML = window.location.href;
+
+</script>

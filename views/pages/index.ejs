@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inside Huddle</title>
+    <%- include ('../partials/head-links.ejs') %>
+</head>
+
+<body>
+    <section class="section-hero">
+        <header>
+            <%- include ('../partials/announcementbar.ejs') %>
+            <%- include ('../partials/header.ejs') %>
+        </header>
+        <div class="div-hero-content">
+            <div class="hero-left-div">
+                <h1>Join the new
+                    <br><span style="font-weight: 500;">#insidehuddle</span>
+                    </br>Community</h1>
+                <p class="hero-text">Join a community built for like-minded entrepreneurs, business owners and industry
+                    experts.</p>
+                <div class="hero-cta-div">
+                    <a class="link-login" href="/"><button class="hero-cta-btn">get started<img class="login-icon"
+                                src="img/right-arrow.png" alt="login icon"></button></a>
+                    <a class="cta-explore-link" href="#explore">Explore Huddle</a>
+                </div>
+            </div>
+            <div class="hero-right-div"></div>
+        </div>
+    </section>
+
+    <section class="section-explainer">
+        <div class="div-explainer-content">
+            <div class="explainer-left-1">
+            </div>
+            <div class="explainer-right-1">
+
+            </div>
+        </div>
+
+        <div class="div-explainer-content-2">
+            <div class="explainer-left">
+                <h2>Download our iOS App</h2>
+                <p class="">Download our iOS App availabe to all Huddle users. Click the link below to start the
+                    download.</p>
+                <div class="app-dl-div">
+                    <a class="app-link" href="/"><img class="app-img" src="/img/app-img2.png"
+                            alt="app download icon" /></a>
+                </div>
+            </div>
+            <div class="explainer-right">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="explore" class="section-about">
+        <div class="div-about-content">
+            <h2>Explore Huddle</h2>
+            <p class="p-about-desc">Huddle is a community and collection of resources for business owners, entrepreneurs
+                and professionals.</p>
+            <div class="div-about-r1">
+                <a class="a-about-link" href="/">
+                    <div class="div-about-items">
+                        <div class="img-about-item1 img-about-items"></div>
+                        <h3>Find professionals</h3>
+                    </div>
+                </a>
+                <a class="a-about-link" href="/">
+                    <div class="div-about-items">
+                        <div class="img-about-item2 img-about-items"></div>
+                        <h3>Business resources</h3>
+                    </div>
+                </a>
+                <a class="a-about-link" href="/">
+                    <div class="div-about-items">
+                        <div class="img-about-item3 img-about-items"></div>
+                        <h3>Explore community</h3>
+                    </div>
+                </a>
+                <a class="a-about-link" href="/">
+                    <div class="div-about-items">
+                        <div class="img-about-item4 img-about-items"></div>
+                        <h3>Find a job</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <%- include ('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

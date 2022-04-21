@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page not found</title>
+    <%- include ('../partials/head-links.ejs') %>
+</head>
+
+<body>
+    <header>
+        <%- include ('../partials/header.ejs') %>
+    </header>
+    <section class="lost-main-section">
+        <div class="lost-main-content">
+            <h1 class="lost-main-h1">Oh dear.</h1>
+            <p>We can't find '<span style="font-weight: 500; color: #3b02ff" id="current-href"></span>'. </p>
+            <p>Either the URL has been typed incorrectly, or this
+                page has been deleted/moved.
+            <p>
+        </div>
+    </section>
+    <footer>
+        <%- include ('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>
